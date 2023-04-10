@@ -1,0 +1,19 @@
+<!-- 모든 template들이 상속 받아서 쓸 기본 틀 -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <a href="{% url 'articles:create' %}">[CREATE]</a>
+  <!-- 영역 지정 -->
+  <!-- 각 template들이 본인의 고유 값을 작성할 영역 -->
+  <!-- 상속 받은 자식 html들이 자기만의 내용을 입력할 수 있는 공간 -->
+  <!-- block 구간_이름 -->
+  {% block content %}{% endblock content %}
+  
+</body>
+</html>

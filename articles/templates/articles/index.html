@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>INDEX PAGE</h1>
+  <!-- articles -> Query Set -> 유사 LIST -->
+  {% for article in articles %}
+    <p>{{ article.pk }}</p>
+    <a href="{% url 'articles:detail' %}">
+      <p>{{ article.title }}</p>
+    </a>
+    <hr>
+  {% endfor %}
+{% endblock content %}

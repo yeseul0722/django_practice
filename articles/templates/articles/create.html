@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>CREATE PAGE</h1>
+  <!-- 사용자가 자기만의 게시글 만들기 위해서, 제목과 내용을 입력할 수 있는 공간-->
+  <!-- form = 사용자가 입력한 내용들을 모아서 서버에게 요청 보내는 역할-->
+  <!-- form의 옵션 method는 GET과 POST 2가지 방식을 가지고 있다.-->
+  <form action="" method="POST">
+    <!-- POST는 db에 변동사항을 발생 시키는 요청이므로 최소한의 보안 처리가 필요 -->
+    {% csrf_token %}
+    <!-- 제목, 내용을 입력할 수 있는 태그-->
+    {{ form.as_p }}
+
+    <!-- 작성 완료한 내용을 제출 할 수 있는 버튼 태그 -->
+    <input type="submit">
+
+  </form>
+{% endblock content %}
